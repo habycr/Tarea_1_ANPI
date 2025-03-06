@@ -1,9 +1,18 @@
-import math
 from Pregunta1 import *
 
 def test():
-    # Evaluando la expresión: 0.8610377433 * cos(3) + ln(2) + sinh(sqrt(2)) + atan(exp(-1))
-    result = div_t(0.8610377433, 1) * cos_t(3) + ln_t(2) + sinh_t(sqrt_t(2)) + atan_t(exp_t(-1))
+    # Calcular cos(3/7)
+    cos_val = cos_t(3/7)
+    # Calcular ln(2)
+    ln_val = ln_t(2)
+    # Sumar y obtener raíz cúbica
+    sum_inside = cos_val + ln_val
+    root_val = root_t(sum_inside, 3)
+    # Calcular arctan(e^-1)
+    exp_val = exp_t(-1)
+    atan_val = atan_t(exp_val)
+    # Sumar resultados
+    result = root_val + atan_val
     print(f"Resultado: {result}")
 
 test()
